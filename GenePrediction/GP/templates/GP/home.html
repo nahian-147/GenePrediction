@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<head>
+	<title>
+		Home
+	</title>
+</head>
+<h1>GENE PREDICTION</h1>
+
+<form method="POST" action="{% url 'GP:predict', username %}">{% csrf_token %}
+        <input type="text" name="username">
+        <input type="submit" name="submit">
+</form>
+
+</html>
