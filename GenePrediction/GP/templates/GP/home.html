@@ -3,10 +3,44 @@
 	<title>
 		Home
 	</title>
+	<style>
+		form{
+			background-color: beige;
+			color: black;
+		}
+		.formPalatte{
+            		background-color: lightgray;
+            		color: black;
+            		font-family: "Cascadia Code";
+            		padding: 2%;
+            		width: min-content;
+           		 border-radius: 5px;
+        	}
+        	.formelmnt{
+            		padding: 2%;
+            		width: min-content;
+        	}
+        	label{
+            		padding: 1%;
+            		width: min-content;
+        	}
+	</style>
+
 </head>
-<h1>GENE PREDICTION</h1>
 
-
-</form>
+<h1 style="text-align: center;">GENE PREDICTION</h1>
+<body>
+	<div align="center">
+		<form class="formPalatte" action="{% url 'gene' %}" method="post">{% csrf_token %}
+			<div class="formelmnt">
+				<label for="path">Path to the fasta/fna file:</label><br>
+				<input type="text" id="path" name="path" value="path to fasta"><br>
+			</div>
+			<div class="formelmnt">
+				<input type="submit" value="submit">
+			</div>
+		</form>
+	</div>
+</body>
 
 </html>
