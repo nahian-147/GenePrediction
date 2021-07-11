@@ -1,0 +1,3 @@
+<form method="POST" action="{% url 'GP:predict', username %}">{% csrf_token %}
+        <input type="text" name="username">
+        <input type="submit" name="submit">

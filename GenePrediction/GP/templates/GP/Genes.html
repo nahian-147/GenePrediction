@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Genes</title>
+	<style>
+		.genes{
+			background-color: aliceblue;
+			color: forestgreen;
+			font-family: 'Courier New', Courier, monospace;
+			padding: 2%;
+		}
+		h1{
+			background-color: black;
+			color: blanchedalmond;
+			font-family: 'Courier New', Courier, monospace;
+			padding: 2%;
+			text-align: center;
+		}
+		p{
+			padding: 1%;
+			overflow-wrap: normal;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<h1>Genes</h1>
+	</div>
+	<div class="genes">
+		{% for genes in orfs %}
+			<p>{% for el in genes %}
+				{{el}}<br>
+			{% endfor %}</p>
+		{% endfor %}
+	</div>
+</body>
+
+</html>
